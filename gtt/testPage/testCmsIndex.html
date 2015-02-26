@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+
+
+
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Pragma" content="no-cache">  
+<meta http-equiv="Cache-Control" content="no-cache">  
+<meta http-equiv="Expires" content="0">   
+<title>Easy Conference Management System</title>
+<link rel="stylesheet" type="text/css" href="testCmsIndex_files/style.css" media="screen">
+</head><body>
+	<div id="header">
+
+	
+		
+		
+			
+				
+			
+		
+		
+		
+		
+	
+	
+	
+
+		
+	<div id="menu">
+		<ul>
+			<li class="first"><a href="http://127.0.0.1:8080/cms/index.jsp?forRole=ADMIN&amp;confId=0">Home</a></li>
+		</ul>
+	</div>
+	</div>
+
+<div id="content">
+	<div id="main">
+		<div id="welcome">
+			<h2></h2>
+			<h3>Dear ADMIN, Welcome to Conference Management System </h3>
+			
+				
+			  		<!-- form start -->	
+					<form name="AccountForm" method="post" action="/cms/login.do">
+						<table>
+							<tbody><tr><td align="right">Account (Email):</td><td><input name="email" size="20" value="admin" type="text"></td></tr>
+							<tr><td align="right">Password:</td><td><input name="password" size="20" value="" type="password"></td></tr>
+							<tr><td colspan="2" align="center"><input value=" Login " type="submit"></td></tr>
+						</tbody></table>
+								<input name="forRole" value="ADMIN" type="hidden">
+								<input name="confId" value="0" type="hidden">
+					</form>
+					<br>
+					<!-- form end -->	
+				
+				
+				
+				
+			
+					<a href="http://127.0.0.1:8080/cms/pages/Account.jsp?role=ADMIN&amp;confId=0">Create Account</a> (you need to create an account before a paper can be submitted)
+	</div>
+	<!-- end #content -->
+	<div id="sidebar">
+		<div id="sidebar-bgtop"></div>
+		<div id="sidebar-content"></div>
+		<div id="sidebar-bgbtm"></div>
+	</div>
+	<!-- end #sidebar -->
+	</div>
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>© 2010. Conference System Management &nbsp;&nbsp;&nbsp;&nbsp;
+	<strong>Green and Plain</strong> is a free template from <a href="http://www.freecsstemplates.org/">Byaa Free CSS Templates</a> released under a <a href="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5 License</a>.</p>
+</div>
+<!-- end #footer -->
+</body></html>

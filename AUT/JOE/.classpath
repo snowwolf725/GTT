@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/bsh.jar"/>
+	<classpathentry kind="lib" path="lib/com.organic.maynard.jar"/>
+	<classpathentry kind="lib" path="lib/com.psm.wiki.jar"/>
+	<classpathentry kind="lib" path="lib/com.yearahead.io.webfile.jar"/>
+	<classpathentry kind="lib" path="lib/jakarta-oro.jar"/>
+	<classpathentry kind="lib" path="lib/jazzy-core.jar"/>
+	<classpathentry kind="lib" path="lib/outliner.jar"/>
+	<classpathentry kind="lib" path="lib/xmlrpc.jar"/>
+	<classpathentry kind="lib" path="lib/xp.jar"/>
+	<classpathentry exported="true" kind="var" path="GTT_HOME/jar/runner.jar"/>
+	<classpathentry exported="true" kind="var" path="GTT_HOME/jar/jakarta-regexp-1.3.jar"/>
+	<classpathentry exported="true" kind="var" path="GTT_HOME/jar/jemmy.jar"/>
+	<classpathentry exported="true" kind="var" path="GTT_HOME/jar/junit.jar"/>
+	<classpathentry exported="true" kind="var" path="GTT_HOME/jar/xercesImpl.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

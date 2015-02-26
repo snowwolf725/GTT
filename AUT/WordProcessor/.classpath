@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="SourceFolder1"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="var" path="GTT_HOME/jar/abbot.jar"/>
+	<classpathentry exported="true" kind="var" path="GTT_HOME/jar/bsh.jar"/>
+	<classpathentry exported="true" kind="var" path="GTT_HOME/jar/runner.jar"/>
+	<classpathentry exported="true" kind="var" path="GTT_HOME/jar/jakarta-regexp-1.3.jar"/>
+	<classpathentry exported="true" kind="var" path="GTT_HOME/jar/jemmy.jar"/>
+	<classpathentry exported="true" kind="var" path="GTT_HOME/jar/junit.jar"/>
+	<classpathentry exported="true" kind="var" path="GTT_HOME/jar/xercesImpl.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. -->
+<project basedir="." default="build" name="GTT">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../Eclipse"/>
+    <property name="junit.output.dir" value="junits"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.6"/>
+    <property name="source" value="1.6"/>
+    <path id="Plug-in Dependencies.libraryclasspath">
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.ui_3.4.0.I20080610-1200.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.swt_3.4.0.v3448f.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.swt.win32.win32.x86_3.4.0.v3448f.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.jface_3.4.0.I20080606-1300.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.commands_3.4.0.I20080509-2000.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.ui.workbench_3.4.0.I20080606-1300.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.runtime_3.4.0.v20080512.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.osgi_3.4.0.v20080605-1900.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.equinox.common_3.4.0.v20080421-2006.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.jobs_3.4.0.v20080512.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.runtime.compatibility.registry_3.2.200.v20080610/runtime_registry_compatibility.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.equinox.registry_3.4.0.v20080516-0950.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.equinox.preferences_3.2.200.v20080421-2006.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.contenttype_3.3.0.v20080604-1400.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.equinox.app_1.1.0.v20080421-2006.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.jface.text_3.4.0.v20080603-2000.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.text_3.4.0.v20080605-1800.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.ui.editors_3.4.0.v20080603-2000.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.filebuffers_3.4.0.v20080603-2000.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.ui.workbench.texteditor_3.4.0.v20080603-2000.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.resources_3.4.0.v20080604-1400.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.ui.ide_3.4.0.I20080606-1300.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.jdt.core_3.4.0.v_874.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.jdt.compiler.apt_1.0.100.v20080513-1235.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.jdt.compiler.tool_1.0.100.v_874.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.jdt.ui_3.4.0.v20080603-2000.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.debug.ui_3.4.0.v20080529-1300.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.debug.core_3.4.0.v20080612.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.ui.console_3.3.0.v20080529-1300.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.search_3.4.0.v20080603-2000.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.jdt.junit_3.4.0.v20080603-2000.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.gef_3.4.0.v20080526.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.draw2d_3.4.0.v20080529.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.ui.views_3.3.0.I20080509-2000.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.runtime.compatibility_3.2.0.v20071008.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.update.configurator_3.2.200.v20080417.jar"/>
+        <pathelement location="jar/Grappa.jar"/>
+        <pathelement location="jar/jcommon-1.0.9.jar"/>
+        <pathelement location="jar/jfreechart-1.0.5.jar"/>
+        <pathelement location="jar/jfreechart-1.0.5-swt.jar"/>
+        <pathelement location="jar/ktable_2.1.3.jar"/>
+        <pathelement location="jar/abbot.jar"/>
+        <pathelement location="jar/bsh.jar"/>
+        <pathelement location="jar/jakarta-regexp-1.3.jar"/>
+        <pathelement location="jar/junit.jar"/>
+        <pathelement location="jar/xercesImpl.jar"/>
+        <pathelement location="jar/xmlParserAPIs.jar"/>
+    </path>
+    <path id="JUnit 3.libraryclasspath">
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.junit_3.8.2.v20080602-1318/junit.jar"/>
+    </path>
+    <path id="GTTlipse.classpath">
+        <pathelement location="bin"/>
+        <pathelement location="jar/myjemmy.jar"/>
+        <path refid="Plug-in Dependencies.libraryclasspath"/>
+        <path refid="JUnit 3.libraryclasspath"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src" excludes="**/*.launch, **/*.java"/>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    
+	<target depends="build-subprojects,build-project" name="build"/>
+    
+	<target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="GTTlipse.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    
+	<target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+	
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+	
+    <target name="test">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="testing.AllTests" todir="${junit.output.dir}"/>
+            <classpath refid="GTTlipse.classpath"/>
+        </junit>
+    </target>
+ 
+	
+    <target name="junitreport">
+        <junitreport todir="${junit.output.dir}">
+            <fileset dir="${junit.output.dir}">
+                <include name="TEST-*.xml"/>
+            </fileset>
+            <report format="frames" todir="${junit.output.dir}"/>
+        </junitreport>
+    </target>
+</project>

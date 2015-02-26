@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository class='org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository' version='1.0.0'?>
+<repository name='file:/D:/GTT/GTTlipseUpdateSite/ - artifacts' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1.0.0'>
+  <properties size='2'>
+    <property name='p2.compressed' value='false'/>
+    <property name='p2.timestamp' value='1216716676343'/>
+  </properties>
+  <mappings size='3'>
+    <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
+    <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
+  </mappings>
+  <artifacts size='9'>
+    <artifact classifier='osgi.bundle' id='GTTlipse' version='1.0.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='6476221'/>
+        <property name='download.size' value='6476221'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='GTTlipse' version='1.0.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='6476190'/>
+        <property name='download.size' value='6476190'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='GTTlipse' version='1.0.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='52121211'/>
+        <property name='download.size' value='52121211'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.ntut.gtt' version='1.0.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='753'/>
+        <property name='download.size' value='753'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='GTTlipse' version='1.0.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='6476253'/>
+        <property name='download.size' value='6476253'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.ntut.gtt' version='1.0.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='859'/>
+        <property name='download.size' value='859'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.ntut.gtt' version='1.0.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='5805'/>
+        <property name='download.size' value='5805'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='GTTlipse' version='1.0.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='6476291'/>
+        <property name='download.size' value='6476291'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='GTTlipse' version='1.0.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='6984017'/>
+        <property name='download.size' value='6984017'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+  </artifacts>
+</repository>

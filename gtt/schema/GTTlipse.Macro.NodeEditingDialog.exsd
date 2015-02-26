@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Schema file written by PDE -->
+<schema targetNamespace="GTTlipse" xmlns="http://www.w3.org/2001/XMLSchema">
+<annotation>
+      <appInfo>
+         <meta.schema plugin="GTTlipse" id="GTTlipse.Macro.NodeEditingDialog" name="NodeEditingDialog"/>
+      </appInfo>
+      <documentation>
+         [Enter description of this extension point.]
+      </documentation>
+   </annotation>
+
+   <element name="extension">
+      <annotation>
+         <appInfo>
+            <meta.element />
+         </appInfo>
+      </annotation>
+      <complexType>
+         <choice minOccurs="1" maxOccurs="unbounded">
+            <element ref="client"/>
+         </choice>
+         <attribute name="point" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="id" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="name" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appInfo>
+                  <meta.attribute translatable="true"/>
+               </appInfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="client">
+      <complexType>
+         <attribute name="class" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appInfo>
+                  <meta.attribute kind="java" basedOn=":gttlipse.macro.dialog.INodeEditingDialogBuilder"/>
+               </appInfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="since"/>
+      </appInfo>
+      <documentation>
+         [Enter the first release in which this extension point appears.]
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="examples"/>
+      </appInfo>
+      <documentation>
+         [Enter extension point usage example here.]
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="apiinfo"/>
+      </appInfo>
+      <documentation>
+          public static final int NID_BREAKER_NODE      = 1;
+ public static final int NID_COMMENT_NODE      = 2;
+ public static final int NID_COMPONENT_EVENT_NODE    = 3;
+ public static final int NID_COMPONENT_NODE      = 4;
+ public static final int NID_NDEFCOMPONENT_NODE     = 5;
+ public static final int NID_COMPOSITE_MACRO_NODE    = 6;
+ public static final int NID_FIT_NODE       = 7;
+ public static final int NID_INVISIBLEROOT_NODE     = 8;
+ public static final int NID_MACRO_COMPONENT_NODE    = 9;
+ public static final int NID_SYSTEM_NODE      = 10;
+ public static final int NID_MACRO_EVENT_NODE     = 11;
+ public static final int NID_DYNAMIC_COMPONENT_EVENT_NODE  = 12;
+ public static final int NID_DYNAMIC_COMPONENT_NODE    = 13;
+ public static final int NID_EVENT_TRIGGER_NODE     = 14;
+ public static final int NID_EXISTENCE_ASSERT_NODE    = 15;
+ public static final int NID_FIT_ASSERTION_NODE     = 16;
+ public static final int NID_FIT_STATE_ASSERTION_NODE   = 17;
+ public static final int NID_FIXNAME_NODE      = 18;
+ public static final int NID_GENERATE_ORDERNAME_NODE   = 19;
+ public static final int NID_INCLUDE_NODE      = 20;
+ public static final int NID_LAUNCH_NODE      = 21;
+ public static final int NID_MACRO_EVENT_CALLER_NODE   = 22;
+ public static final int NID_MOCK_ABSTRACT_MACRO_NODE   = 23;
+ public static final int NID_MODE_ASSERT_NODE     = 24;
+ public static final int NID_ORACLE_NODE      = 25;
+ public static final int NID_SLEEP_NODE       = 26;
+ public static final int NID_SPLITEDATA_ASNAME_NODE    = 27;
+ public static final int NID_SPLITEDATA_NODE     = 28;
+ public static final int NID_VIEW_ASSERT_NODE     = 29;
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="implementation"/>
+      </appInfo>
+      <documentation>
+         [Enter information about supplied implementation of this extension point.]
+      </documentation>
+   </annotation>
+
+
+</schema>

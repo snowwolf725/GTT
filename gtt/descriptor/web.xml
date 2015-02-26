@@ -1,0 +1,157 @@
+<GTT_Default_Component_XML_File>  
+<Scope name="HtmlElement">
+     <WebComponent>
+        <Component componentClassType="gtt.eventmodel.web.HtmlElement"/>
+     </WebComponent>
+      <Events>
+        <Enum name="CLICK" data="10002"></Enum>
+        <Enum name="SET_SELECTED" data="10004"></Enum>
+      </Events>
+</Scope>
+
+
+
+<Scope name="HtmlForm">
+     <WebComponent>
+        <Component componentClassType="gtt.eventmodel.web.HtmlForm"/>
+     </WebComponent>
+      <Events>
+         <Enum name="SUBMIT" data="10005"></Enum>
+      </Events>
+</Scope>
+
+
+<Scope name="HtmlInputText">
+     <WebComponent>
+        <Component componentClassType="gtt.eventmodel.web.HtmlInputText"/>
+     </WebComponent>
+      <Events>
+        <Enum name="CLEAR" data="10001"></Enum>
+        <Enum name="INPUT" data="10003">
+          		<Arguments>
+			<Argument type="java.lang.String" name="InputValue"/>
+          		</Arguments>
+        </Enum>
+      </Events>
+</Scope>
+
+
+<Scope name="HtmlRadio">
+     <WebComponent>
+        <Component componentClassType="gtt.eventmodel.web.HtmlRadio"/>
+     </WebComponent>
+      <Events>
+        <Enum name="CLEAR" data="10001"></Enum>
+        <Enum name="CLICK" data="10002"></Enum>
+        <Enum name="SET_SELECTED" data="10004"></Enum>
+      </Events>
+</Scope>
+
+
+<Scope name="HtmlCheckbox">
+     <WebComponent>
+        <Component componentClassType="gtt.eventmodel.web.HtmlCheckbox"/>
+     </WebComponent>
+      <Events>
+        <Enum name="CLEAR" data="10001"></Enum>
+        <Enum name="CLICK" data="10002"></Enum>
+        <Enum name="SET_SELECTED" data="10004"></Enum>
+      </Events>
+</Scope>
+
+<Scope name="HtmlLink">
+     <WebComponent>
+        <Component componentClassType="gtt.eventmodel.web.HtmlLink"/>
+     </WebComponent>
+      <Events>
+        <Enum name="CLICK" data="10002"></Enum>
+      </Events>
+</Scope>
+
+<Scope name="HtmlButton">
+     <WebComponent>
+        <Component componentClassType="gtt.eventmodel.web.HtmlButton"/>
+     </WebComponent>
+      <Events>
+        <Enum name="CLICK" data="10002"></Enum>
+      </Events>
+</Scope>
+
+
+
+<Scope name="HtmlTextArea">
+     <WebComponent>
+        <Component componentClassType="gtt.eventmodel.web.HtmlTextArea"/>
+     </WebComponent>
+      <Events>
+        <Enum name="CLEAR" data="10001"></Enum>
+        <Enum name="CLICK" data="10002"></Enum>
+        <Enum name="INPUT" data="10003">
+          		<Arguments>
+			<Argument type="java.lang.String" name="InputValue"/>
+          		</Arguments>
+        </Enum>
+        <Enum name="SET_SELECTED" data="10004"></Enum>
+      </Events>
+</Scope>
+
+
+<Scope name="HtmlTable">
+     <WebComponent>
+        <Component componentClassType="gtt.eventmodel.web.HtmlTable"/>
+     </WebComponent>
+</Scope>
+
+
+
+<Scope name="HtmlSelect">
+     <WebComponent>
+        <Component componentClassType="gtt.eventmodel.web.HtmlSelect"/>
+     </WebComponent>
+      <Events>
+        <Enum name="DESELECT_ALL" data="20001">
+        </Enum>
+        <Enum name="DESELECT_BY_INDEX" data="20002">
+          <Arguments>
+             <Argument type="int" name="Index"/>
+          </Arguments>
+        </Enum>
+        <Enum name="DESELECT_BY_VALUE" data="20003">
+          <Arguments>
+             <Argument type="java.lang.String" name="Value"/>
+          </Arguments>
+        </Enum>
+        <Enum name="DESELECT_BY_VISIBLE_TEXT" data="20004">
+          <Arguments>
+	<Argument type="java.lang.String" name="VisibleValue"/>
+          </Arguments>
+        </Enum>
+         <Enum name="SELECT_BY_INDEX" data="20005">
+          <Arguments>
+	<Argument type="int" name="Index" />
+          </Arguments>
+	</Enum>
+        <Enum name="SELECT_BY_VALUE" data="20006">
+          <Arguments>
+	<Argument type="java.lang.String" name="Value"/>
+          </Arguments>
+        </Enum>
+        <Enum name="SELECT_BY_VISIBLE_VALUE" data="20007">
+          <Arguments>
+	<Argument type="java.lang.String" name="VisibleValue"/>
+          </Arguments>
+        </Enum>
+        </Events>
+
+</Scope>
+
+<Scope name="HtmlImg">
+     <WebComponent>
+        <Component componentClassType="gtt.eventmodel.web.HtmlImg"/>
+     </WebComponent>
+      <Events>
+        <Enum name="CLICK" data="10002"></Enum>
+      </Events>     
+</Scope> 
+
+</GTT_Default_Component_XML_File>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="BIG5"?>
+<Android4GTT_Default_Component_XML_File>
+	<Scope name="AndroidComponents">
+		<Scope name="View">
+			<AndroidComponent>
+				<Component componentClassType="android.widget.Button"/>			          	
+			    <Component componentClassType="android.widget.ToggleButton"/>
+		        <Component componentClassType="android.widget.RadioButton"/>
+		      	<Component componentClassType="android.widget.CheckBox"/>
+		      	<Component componentClassType="android.widget.TextView"/>
+		      	<Component componentClassType="android.widget.CheckedTextView"/>
+				<Component componentClassType="android.widget.ImageView"/>
+			    <Component componentClassType="android.widget.ImageButton"/>
+			</AndroidComponent>
+	    	<Events>
+			    <Enum name="CLICK" data="501">
+	        		<Arguments>
+	          		</Arguments>
+	      		</Enum>
+	    	</Events>
+	    	<Events>
+			    <Enum name="CLICK_LONG" data="502">
+	        		<Arguments>
+	          		</Arguments>
+	      		</Enum>
+	    	</Events>
+		    <Scope name="EditText">
+		        <AndroidComponent>
+		          	<Component componentClassType="android.widget.EditText"/>
+		        </AndroidComponent>
+		        <Events>
+		        	<Enum name="CLEAR_TEXT" data="503">
+			        	<Arguments>
+			          	</Arguments>
+			      	</Enum>
+			      	<Enum name="ENTER_TEXT" data="504">
+			        	<Arguments>
+			          		<Argument type="java.lang.String" name="Text"/>	
+			          	</Arguments>
+			      	</Enum>
+			    </Events>
+		    </Scope>
+		</Scope>
+	    <Scope name="ListView">
+	    	<AndroidComponent>
+	        	<Component componentClassType="android.widget.ListView"/>
+	    	</AndroidComponent>
+		    <Events>
+		    	<Enum name="CLICK_IN" data="505">
+		        	<Arguments>
+		          		<Argument type="int" name="Line"/>		
+		          	</Arguments>
+	      		</Enum>
+		    	<Enum name="CLICK_LONG_IN" data="506">
+		        	<Arguments>
+		        		<Argument type="int" name="Line"/>
+		          	</Arguments>
+		      	</Enum>
+		      	<Enum name="SCROLL_DOWN" data="507">
+		        	<Arguments>
+		          	</Arguments>
+		      	</Enum>
+		      	<Enum name="SCROLL_UP" data="508">
+		        	<Arguments>
+		          	</Arguments>
+		      	</Enum>
+		    </Events>
+	    </Scope>
+		<Scope name="Spinner">
+		    <AndroidComponent>
+		        <Component componentClassType="android.widget.Spinner"/>
+		    </AndroidComponent>
+			<Events>
+				<Enum name="CLICK_IN" data="509">
+		        	<Arguments>
+		          		<Argument type="int" name="ItemID"/>
+		          	</Arguments>
+	      		</Enum>
+			</Events>
+		</Scope>
+		<Scope name="DatePicker">
+		    <AndroidComponent>
+		        <Component componentClassType="android.widget.DatePicker"/>
+		    </AndroidComponent>
+			<Events>
+				<Enum name="SET_DATEPICKER" data="526">
+		        	<Arguments>
+		          		<Argument type="int" name="Year"/>
+		          		<Argument type="int" name="Month"/>
+		          		<Argument type="int" name="Day"/>
+		          	</Arguments>
+	      		</Enum>
+			</Events>
+		</Scope>
+		<Scope name="TimePicker">
+		    <AndroidComponent>
+		        <Component componentClassType="android.widget.TimePicker"/>
+		    </AndroidComponent>
+			<Events>
+				<Enum name="SET_TIMEPICKER" data="527">
+		        	<Arguments>
+		          		<Argument type="int" name="Hour"/>
+		          		<Argument type="int" name="Minute"/>
+		          	</Arguments>
+	      		</Enum>
+			</Events>
+		</Scope>
+		<Scope name="ProgressBar">
+		    <AndroidComponent>
+		        <Component componentClassType="android.widget.ProgressBar"/>
+		        <Component componentClassType="android.widget.RatingBar"/>
+		        <Component componentClassType="android.widget.SeekBar"/>
+		    </AndroidComponent>
+			<Events>
+				<Enum name="SET_PROGRESS" data="528">
+		        	<Arguments>
+		          		<Argument type="int" name="Progress"/>
+		          	</Arguments>
+	      		</Enum>
+			</Events>
+		</Scope>
+		<Scope name="SlidingDrawer">
+		    <AndroidComponent>
+		        <Component componentClassType="android.widget.SlidingDrawer"/>
+		    </AndroidComponent>
+			<Events>
+				<Enum name="OPEN" data="529">
+		        	<Arguments>
+		          	</Arguments>
+	      		</Enum>
+	      		<Enum name="CLOSE" data="530">
+		        	<Arguments>
+		          	</Arguments>
+	      		</Enum>
+			</Events>
+		</Scope>
+		<Scope name="Control">
+			<AndroidComponent>
+	        	<Component componentClassType="android4gtt.component.ControlComponent"/>
+	    	</AndroidComponent>
+			<Events>
+		      	<Enum name="GO_BACK" data="510">
+		        	<Arguments>
+		          	</Arguments>
+		      	</Enum>
+		      	<Enum name="GO_BACK_TO" data="511">
+		        	<Arguments>
+		          		<Argument type="java.lang.String" name="ActivityName"/>	
+		          	</Arguments>
+		      	</Enum>
+		      	<Enum name="SEND_KEY" data="512">
+		        	<Arguments>
+		          		<Argument type="java.lang.String" name="Key"/>	
+		        	</Arguments>
+		      	</Enum>
+		      	<Enum name="CLICK_ON_MENUITEM" data="513">
+		        	<Arguments>
+		          		<Argument type="java.lang.String" name="Text"/>	
+		        	</Arguments>
+		      	</Enum>
+		      	<Enum name="CLICK_ON_SUBMENUITEM" data="514">
+		        	<Arguments>
+		          		<Argument type="java.lang.String" name="Text"/>	
+		          	</Arguments>
+		      	</Enum>
+		      	<Enum name="PRESS_MENUITEM" data="515">
+		        	<Arguments>
+		          		<Argument type="int" name="Index"/>	
+		        	</Arguments>
+		      	</Enum>
+		      	<Enum name="WAIT_ACTIVITY" data="516">
+		        	<Arguments>
+		          		<Argument type="java.lang.String" name="ActivityName"/>	
+		        	</Arguments>
+		      	</Enum>
+		    </Events>
+		</Scope>
+		<Scope name="Screen">
+			<AndroidComponent>
+	        	<Component componentClassType="android4gtt.component.ScreenComponent"/>
+	    	</AndroidComponent>
+			<Events>
+		      	<Enum name="CLICK_ON_SCREEN" data="517">
+		        	<Arguments>
+		          		<Argument type="java.lang.Float" name="X"/>	
+		          		<Argument type="java.lang.Float" name="Y"/>	
+		        	</Arguments>
+		      	</Enum>
+		      	<Enum name="CLICK_LONG_ON_SCREEN" data="518">
+		        	<Arguments>
+		          		<Argument type="java.lang.Float" name="X"/>	
+		          		<Argument type="java.lang.Float" name="Y"/>	
+		        	</Arguments>
+		      	</Enum>
+		      	<Enum name="CLICK_ON" data="519">
+		        	<Arguments>
+		        		<Argument type="java.lang.String" name="Text"/>
+		        	</Arguments>
+		      	</Enum>
+			    <Enum name="CLICK_LONG_ON" data="520">
+		        	<Arguments>
+		        		<Argument type="java.lang.String" name="Text"/>	
+		        	</Arguments>
+		      	</Enum>  	
+		      	<Enum name="CLICK_LONG_ON_AND_PRESS" data="521">
+		        	<Arguments>
+		        		<Argument type="java.lang.String" name="Text"/>
+		        		<Argument type="int" name="Index"/>	
+		          	</Arguments>
+		      	</Enum>
+		      	<Enum name="SCROLL_DOWN" data="522">
+		        	<Arguments>
+		          	</Arguments>
+		      	</Enum>
+		      	<Enum name="SCROLL_UP" data="523">
+		        	<Arguments>
+		          	</Arguments>
+		      	</Enum>
+		      	<Enum name="SCROLL_TO_SIDE" data="524">
+		        	<Arguments>
+		        		<Argument type="int" name="Side"/>
+		          	</Arguments>
+		      	</Enum>
+		      	<Enum name="DRAG" data="525">
+		        	<Arguments>
+		        		<Argument type="java.lang.Float" name="FromX"/>
+		        		<Argument type="java.lang.Float" name="ToX"/>
+		        		<Argument type="java.lang.Float" name="FromY"/>
+		        		<Argument type="java.lang.Float" name="ToY"/>
+		        		<Argument type="int" name="StepCount"/>
+		          	</Arguments>
+		      	</Enum>
+		    </Events>
+		</Scope>		
+	</Scope>  
+</Android4GTT_Default_Component_XML_File>

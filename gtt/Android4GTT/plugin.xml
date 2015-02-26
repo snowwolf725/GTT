@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="GTTlipse.TestPlatformInfo">
+      <client
+            class="android4gtt.AndroidPlatformInfo">
+      </client>
+   </extension>
+   <extension
+         point="GTTlipse.Macro.NodeEditingDialog">
+      <client
+            class="android4gtt.macro.node.dialog.AndroidComponetNodeDialogBuilder">
+      </client>
+   </extension>
+   <extension
+         id="GTTlipse.ScriptEditor.Action.Launcher"
+         name="Launcher"
+         point="GTTlipse.ScriptEditor.Action.Launcher">
+      <client
+            class="android4gtt.scriptEditor.action.AndroidJUnitLauncher">
+      </client>
+   </extension>
+   <extension
+         point="GTTlipse.ScriptEditor.Action.DefaultEventNode">
+      <client
+            class="android4gtt.scriptEditor.action.DefaultEventNode">
+      </client>
+   </extension>
+   <extension
+         point="GTTlipse.ScriptEditor.Action.DefaultAssertNode">
+      <client
+            class="android4gtt.scriptEditor.action.DefaultAssertNode">
+      </client>
+   </extension>
+
+</plugin>

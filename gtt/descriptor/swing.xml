@@ -1,0 +1,1085 @@
+
+<GTT_Default_Component_XML_File>
+  <Scope name="JComponent">
+    <CustomizeType>
+      <Data name="Button" dataType="Enum">
+        <EnumList enumType="int">
+          <Enum name="Left" data="16" />
+          <Enum name="Middle" data="8" />
+          <Enum name="Right" data="4" />
+        </EnumList>
+      </Data>
+      <Data name="Modifier" dataType="Enum">
+        <EnumList enumType="int">
+          <Enum name="None" data="12" />
+          <Enum name="Alt" data="18" />
+          <Enum name="Backspace" data="8" />
+          <Enum name="CapsLock" data="20" />
+          <Enum name="Ctrl" data="17" />
+          <Enum name="Delete" data="127" />
+          <Enum name="Down" data="40" />
+          <Enum name="End" data="35" />
+          <Enum name="Enter" data="10" />
+          <Enum name="Esc" data="27" />
+          <Enum name="F1" data="112" />
+          <Enum name="F2" data="113" />
+          <Enum name="F3" data="114" />
+          <Enum name="F4" data="115" />
+          <Enum name="F5" data="116" />
+          <Enum name="F6" data="117" />
+          <Enum name="F7" data="118" />
+          <Enum name="F8" data="119" />
+          <Enum name="F9" data="120" />
+          <Enum name="F10" data="121" />
+          <Enum name="F11" data="122" />
+          <Enum name="F12" data="123" />
+          <Enum name="Home" data="36" />
+          <Enum name="Insert" data="155" />
+          <Enum name="Left" data="37" />
+          <Enum name="NumLk" data="144" />
+          <Enum name="Pause" data="19" />
+          <Enum name="PgUp" data="33" />
+          <Enum name="PgDn" data="34" />
+          <Enum name="PrtSc" data="154" />
+          <Enum name="Right" data="39" />
+          <Enum name="ScrLk" data="145" />
+          <Enum name="Shift" data="16" />
+          <Enum name="Tab" data="9" />
+          <Enum name="Up" data="38" />
+        </EnumList>
+      </Data>
+    </CustomizeType>
+    <SwingComponent>
+      <Component componentClassType="javax.swing.JToolBar" windowClassType="javax.swing.JFrame" />
+      <Component componentClassType="javax.swing.JProgressBar" windowClassType="javax.swing.JFrame" />
+      <Component componentClassType="javax.swing.JLabel" windowClassType="javax.swing.JFrame" />
+      <Component componentClassType="javax.swing.JPanel" windowClassType="javax.swing.JFrame" />
+    </SwingComponent>
+    <Events>
+      <Enum name="PRESS_KEY" data="1000">
+        <Arguments>
+          <Argument type="Modifier" name="Modifier" />
+          <Argument type="char" name="Char" />
+        </Arguments>
+      </Enum>
+      <Enum name="PRESS_MOUSE" data="1001">
+        <Arguments>
+          <Argument type="MouseButton" name="Button" />
+          <Argument type="int" name="X" />
+          <Argument type="int" name="Y" />
+        </Arguments>
+      </Enum>
+      <Enum name="RELEASE_KEY" data="1002">
+        <Arguments>
+          <Argument type="Modifier" name="Modifier" />
+          <Argument type="char" name="Char" />
+        </Arguments>
+      </Enum>
+      <Enum name="RELEASE_MOUSE" data="1003">
+        <Arguments>
+          <Argument type="MouseButton" name="Button" />
+          <Argument type="int" name="X" />
+          <Argument type="int" name="Y" />
+        </Arguments>
+      </Enum>
+      <Enum name="TYPE_KEY" data="1004">
+        <Arguments>
+          <Argument type="Modifier" name="Modifier" />
+          <Argument type="Char" name="Char" />
+        </Arguments>
+      </Enum>
+      <Enum name="CLICK_NO_BLOCK" data="1005">
+        <Arguments>
+          <Argument type="MouseButton" name="Button" />
+			<Argument type="int" name="X" />
+          <Argument type="int" name="Y" />
+        </Arguments>
+      </Enum>
+      <Enum name="CLICK_MOUSE" data="1006">
+        <Arguments>
+          <Argument type="MouseButton" name="Button" />
+          <Argument type="Modifier" name="Modifier" />
+          <Argument type="int" name="ClickCount" />
+          <Argument type="int" name="X" />
+          <Argument type="int" name="Y" />
+        </Arguments>
+      </Enum>
+       <Enum name="CLICK_MOUSE_NOXY" data="1013">
+        <Arguments>
+        </Arguments>
+      </Enum>
+      <Enum name="DRAGNDROP" data="1007">
+        <Arguments>
+          <Argument type="MouseButton" name="Button" />
+          <Argument type="Modifier" name="Modifier" />
+        </Arguments>
+      </Enum>
+      <Enum name="DRAG_MOUSE" data="1008">
+        <Arguments>
+          <Argument type="int" name="X" />
+          <Argument type="int" name="Y" />
+        </Arguments>
+      </Enum>
+      <Enum name="ENTER_MOUSE" data="1009">
+        <Arguments>
+        </Arguments>
+      </Enum>
+      <Enum name="EXIT_MOUSE" data="1010">
+        <Arguments>
+        </Arguments>
+      </Enum>
+      <Enum name="MOVE_MOUSE" data="1011">
+        <Arguments>
+          <Argument type="MouseButton" name="Button" />
+           <Argument type="int" name="X" />
+          <Argument type="int" name="Y" />
+        </Arguments>
+      </Enum>
+      <Enum name="SET_TIME_OUT" data="1012">
+        <Arguments>
+          <Argument type="long" name="TimeOut" />
+        </Arguments>
+      </Enum>
+    </Events>
+    <Scope name="AbstractButton">
+      <SwingComponent>
+        <Component componentClassType="javax.swing.JButton" windowClassType="javax.swing.JFrame" />
+        <Component componentClassType="javax.swing.JCheckBox" windowClassType="javax.swing.JFrame" />
+        <Component componentClassType="javax.swing.JMenuItem" windowClassType="javax.swing.JFrame" />
+      </SwingComponent>
+      <Events>
+        <Enum name="PRESS" data="900">
+          <Arguments>
+          </Arguments>
+        </Enum>
+        <Enum name="PUSH" data="901">
+          <Arguments>
+          </Arguments>
+        </Enum>
+        <Enum name="PUSH_NO_BLOCK" data="902">
+          <Arguments>
+          </Arguments>
+        </Enum>
+        <Enum name="RELEASE" data="903">
+          <Arguments>
+          </Arguments>
+        </Enum>
+      </Events>
+      <Scope name="JMenu">
+        <Events>
+          <Enum name="PUSH" data="901">
+            <Arguments>
+            </Arguments>
+          </Enum>
+          <Enum name="PUSH_NO_BLOCK" data="902">
+            <Arguments>
+            </Arguments>
+          </Enum>
+                    
+          <Enum name="PUSH_MENU" data="1062">
+            <Arguments>
+              <Argument type="String" name="Path" />
+            </Arguments>
+          </Enum>
+          
+           <Enum name="PUSH_MENU_NO_BLOCK" data="1063">
+            <Arguments>
+              <Argument type="String" name="Path" />
+            </Arguments>
+          </Enum>
+
+          <Enum name="SHOW_MENU_ITEM" data="1064">
+            <Arguments>
+              <Argument type="String" name="Item" />
+              
+            </Arguments>
+          </Enum>
+        </Events>
+        <SwingComponent>
+          <Component componentClassType="javax.swing.JMenu" windowClassType="javax.swing.JFrame" />
+        </SwingComponent>
+      </Scope>
+      <SwingComponent>
+        <Component componentClassType="javax.swing.JRadioButton" windowClassType="javax.swing.JFrame" />
+        <Component componentClassType="javax.swing.JToggleButton" windowClassType="javax.swing.JFrame" />
+      </SwingComponent>
+    </Scope>
+    <Scope name="JColorChooser">
+      <Events>
+        <Event name="ENTER_COLOR" data="1011">
+          <Arguments>
+            <Argument type="int" name="Red" />
+            <Argument type="int" name="Green" />
+            <Argument type="int" name="Blue" />
+            
+          </Arguments>
+        </Event>
+      </Events>
+      <SwingComponent>
+        <Component componentClassType="javax.swing.JColorChooser" windowClassType="javax.swing.JFrame" />
+      </SwingComponent>
+    </Scope>
+    <Scope name="JComboBox">
+      <Events>
+        <Enum name="CLEAR_TEXT" data="1152">
+          <Arguments>
+            
+          </Arguments>
+        </Enum>
+        <Enum name="ENTER_TEXT" data="1153">
+          <Arguments>
+            <Argument type="String" name="Text" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="TYPE_TEXT" data="1159">
+          <Arguments>
+            <Argument type="String" name="Text" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SELECT_ITEM_BY_INDEX" data="1024">
+          <Arguments>
+            <Argument type="String" name="Index" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SELECT_ITEM_BY_STRING" data="1025">
+          <Arguments>
+            <Argument type="String" name="Item" />
+            
+          </Arguments>
+        </Enum>
+      </Events>
+      <SwingComponent>
+        <Component componentClassType="javax.swing.JComboBox" windowClassType="javax.swing.JFrame" />
+      </SwingComponent>
+    </Scope>
+    <Scope name="JFileChooser">
+      <Events>
+        <Enum name="APPROVE" data="1031">
+          <Arguments>
+            
+          </Arguments>
+        </Enum>
+        <Enum name="CANCEL" data="1032">
+          <Arguments>
+            
+          </Arguments>
+        </Enum>
+        <Enum name="CHOOSE_FILE" data="1033">
+          <Arguments>
+            <Argument type="String" name="SelectedFile" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="CLICK_ON_FILE_BY_INDEX" data="1034">
+          <Arguments>
+            <Argument type="String" name="SelectedFile" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="CLICK_ON_FILE_BY_NAME" data="1035">
+          <Arguments>
+            <Argument type="String" name="SelectedFile" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="ENTER_SUB_DIR" data="1036">
+          <Arguments>
+            <Argument type="String" name="SelectedDir" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SELECT_FILE" data="1037">
+          <Arguments>
+            <Argument type="String" name="SelectedFile" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SELECT_FILE_TYPE" data="1038">
+          <Arguments>
+            <Argument type="String" name="Filter" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SELECT_Path_DIRECTORY" data="1039">
+          <Arguments>
+            <Argument type="String" name="SelectedDir" />
+            
+          </Arguments>
+        </Enum>
+      </Events>
+      <SwingComponent>
+        <Component componentClassType="javax.swing.JFileChooser" windowClassType="javax.swing.JFrame" />
+      </SwingComponent>
+    </Scope>
+    <Scope name="JInternalFrame">
+      <Events>
+        <Enum name="ACTIVATE" data="1171">
+          <Arguments>
+            
+          </Arguments>
+        </Enum>
+        <Enum name="CLOSE" data="1172">
+          <Arguments>
+            
+          </Arguments>
+        </Enum>
+        <Enum name="DEICONIFY" data="1170">
+          <Arguments>
+            
+          </Arguments>
+        </Enum>
+        <Enum name="DEMAXIMIZE" data="1181">
+          <Arguments>
+            
+          </Arguments>
+        </Enum>
+        <Enum name="MAXIMIZE" data="1182">
+          <Arguments>
+            
+          </Arguments>
+        </Enum>
+        <Enum name="MOVE" data="1173">
+          <Arguments>
+            <Argument type="int" name="X" />
+            <Argument type="int" name="Y" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="RESIZE" data="1174">
+          <Arguments>
+            <Argument type="int" name="Width" />
+            <Argument type="int" name="Height" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SCROLL_TO_FRAME" data="1175">
+          <Arguments>
+            
+          </Arguments>
+        </Enum>
+      </Events>
+      <SwingComponent>
+        <Component componentClassType="javax.swing.JInternalFrame" windowClassType="javax.swing.JFrame" />
+      </SwingComponent>
+    </Scope>
+    <Scope name="JList">
+      <Events>
+        <Enum name="PRESS_MOUSE" data="1001">
+          <Arguments>
+            <Argument type="String" name="Items" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="RELEASE_MOUSE" data="1003">
+          <Arguments>
+            <Argument type="String" name="Items" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SELECT_ITEMS_BY_INDEX" data="1053">
+          <Arguments>
+            <Argument type="int" name="Items" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SELECT_ITEMS_BY_TEXT" data="1054">
+          <Arguments>
+            <Argument type="String" name="Items" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="CLICK_ON_ITEM_BY_INDEX" data="1055">
+          <Arguments>
+            <Argument type="int" name="ClickCount" />
+            <Argument type="int" name="Item" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="CLICK_ON_ITEM_BY_TEXT" data="1056">
+          <Arguments>
+            <Argument type="int" name="ClickCount" />
+            <Argument type="String" name="Item" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SCROLL_TO_ITEM_BY_INDEX" data="1057">
+          <Arguments>
+            <Argument type="int" name="Item" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SCROLL_TO_ITEM_BY_TEXT" data="1058">
+          <Arguments>
+              <Argument type="String" name="Item" />
+            
+          </Arguments>
+        </Enum>
+      </Events>
+      <SwingComponent>
+        <Component componentClassType="javax.swing.JList" windowClassType="javax.swing.JFrame" />
+      </SwingComponent>
+    </Scope>
+    <Scope name="JMenuBar">
+      <Events>
+        <Enum name="CLOSE_SUBMENUS" data="1061">
+          <Arguments>
+            
+          </Arguments>
+        </Enum>
+        <Enum name="PUSH_MENU" data="1062">
+          <Arguments>
+            <Argument type="String" name="Path" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="PUSH_MENU_NO_BLOCK" data="1063">
+          <Arguments>
+            <Argument type="String" name="Path" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SHOW_MENU_ITEM" data="1064">
+          <Arguments>
+            <Argument type="String" name="Item" />
+            
+          </Arguments>
+        </Enum>
+      </Events>
+      <SwingComponent>
+        <Component componentClassType="javax.swing.JMenuBar" windowClassType="javax.swing.JFrame" />
+      </SwingComponent>
+    </Scope>
+    <Scope name="JPopupMenu">
+      <Events>
+        <Enum name="CALL_POPUP" data="1071">
+          <Arguments>
+            <Argument type="String" name="ComponentName" />
+            <Argument type="String" name="Path" />
+            
+          </Arguments>
+        </Enum>
+        
+        <Enum name="PRESS_MOUSE" data="1001">
+          <Arguments>
+            <Argument type="String" name="Path" />
+            <Argument type="int" name="X" />
+            <Argument type="int" name="Y" />
+            
+          </Arguments>
+        </Enum>
+        
+         <Enum name="RELEASE_MOUSE" data="1003">
+          <Arguments>
+            <Argument type="String" name="Path" />
+            <Argument type="int" name="X" />
+            <Argument type="int" name="Y" />
+            
+          </Arguments>
+        </Enum>
+        
+        <Enum name="PUSH_MENU" data="1062">
+          <Arguments>
+            <Argument type="String" name="Item" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="PUSH_MENU_NO_BLOCK" data="1063">
+          <Arguments>
+            <Argument type="String" name="Item" />
+            
+          </Arguments>
+        </Enum>
+
+        <Enum name="SHOW_MENU_ITEM" data="1064">
+          <Arguments>
+            <Argument type="String" name="Item" />
+            
+          </Arguments>
+        </Enum>
+      </Events>
+      <SwingComponent>
+        <Component componentClassType="javax.swing.JPopupMenu" windowClassType="javax.swing.JFrame" />
+      </SwingComponent>
+    </Scope>
+    <Scope name="JScrollBar">
+    	<Events>
+        <Enum name="SCROLL_TO_MAXIMUM" data="1101">
+          <Arguments>
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SCROLL_TO_MINIMUM" data="1102">
+          <Arguments>
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SCROLL_TO_PERCENT" data="1086">
+          <Arguments>
+            <Argument type="double" name="Percent" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SCROLL_TO_VALUE" data="1087">
+          <Arguments>
+            <Argument type="int" name="Value" />
+            
+          </Arguments>
+        </Enum>
+      </Events>
+      <SwingComponent>
+        <Component componentClassType="javax.swing.JScrollBar" windowClassType="javax.swing.JFrame" />
+      </SwingComponent>
+    </Scope>
+    <Scope name="JScrollPane">
+      <Events>
+        <Enum name="SCROLL_TO_BOTTOM" data="1091">
+          <Arguments>
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SCROLL_TO_COMPONENT" data="1092">
+          <Arguments>
+            <Argument type="String" name="ComponentName" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SCROLL_TO_HORIZONTAL_VALUE" data="1093">
+          <Arguments>
+            <Argument type="double" name="X" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SCROLL_TO_LEFT" data="1094">
+          <Arguments>
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SCROLL_TO_RIGHT" data="1095">
+          <Arguments>
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SCROLL_TO_TOP" data="1096">
+          <Arguments>
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SCROLL_TO_VALUES" data="1097">
+          <Arguments>
+            <Argument type="double" name="X" />
+            <Argument type="double" name="Y" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SCROLL_TO_VERTICAL_VALUE" data="1098">
+          <Arguments>
+            <Argument type="double" name="Y" />
+            
+          </Arguments>
+        </Enum>
+      </Events>
+      <SwingComponent>
+        <Component componentClassType="javax.swing.JScrollPane" windowClassType="javax.swing.JFrame" />
+      </SwingComponent>
+    </Scope>
+    <Scope name="JSlider">
+      <Events>
+        <Enum name="SCROLL_TO_MAXIMUM" data="1101">
+          <Arguments>
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SCROLL_TO_MINIMUM" data="1102">
+          <Arguments>
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SCROLL_TO_PERCENT" data="1086">
+          <Arguments>
+            <Argument type="double" name="Percent" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SCROLL_TO_VALUE" data="1087">
+          <Arguments>
+            <Argument type="int" name="Value" />
+            
+          </Arguments>
+        </Enum>
+      </Events>
+      <SwingComponent>
+        <Component componentClassType="javax.swing.JSlider" windowClassType="javax.swing.JFrame" />
+      </SwingComponent>
+    </Scope>
+    <Scope name="JSpinner">
+      <Events>
+        <Enum name="SCROLL_TO_MAXIMUM" data="1101">
+          <Arguments>
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SCROLL_TO_MINIMUM" data="1102">
+          <Arguments>
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SCROLL_TO_STRING" data="1103">
+          <Arguments>
+            <Argument type="String" name="Value" />
+            
+          </Arguments>
+        </Enum>
+      </Events>
+      <SwingComponent>
+        <Component componentClassType="javax.swing.JSpinner" windowClassType="javax.swing.JFrame" />
+      </SwingComponent>
+    </Scope>
+    
+    <Scope name="JSplitPane">
+      <Events>
+        <Enum name="EXPAND_LEFT" data="1111">
+          <Arguments>
+            
+          </Arguments>
+        </Enum>
+        <Enum name="EXPAND_RIGHT" data="1112">
+          <Arguments>
+            
+          </Arguments>
+        </Enum>
+        <Enum name="MOVE_DIVIDER" data="1113">
+          <Arguments>
+            <Argument type="int" name="Value" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="MOVE_TO_MAXIMUM" data="1114">
+          <Arguments>
+            
+          </Arguments>
+        </Enum>
+        <Enum name="MOVE_TO_MINIMUM" data="1115">
+          <Arguments>
+            
+          </Arguments>
+        </Enum>
+      </Events>
+      <SwingComponent>
+        <Component componentClassType="javax.swing.JSplitPane" windowClassType="javax.swing.JFrame" />
+      </SwingComponent>
+    </Scope>
+    
+    <Scope name="JTabbedPane">
+    	<Events>
+        <Enum name="SELECT_PAGE" data="1123">
+          <Arguments>
+            <Argument type="String" name="Title" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SELECT_PAGE_BY_INDEX" data="1124">
+          <Arguments>
+            <Argument type="int" name="Index" />
+            
+          </Arguments>
+        </Enum>
+      </Events>
+      <SwingComponent>
+        <Component componentClassType="javax.swing.JTabbedPane" windowClassType="javax.swing.JFrame" />
+      </SwingComponent>
+    </Scope>
+    
+    <Scope name="JTable">
+      <Events>
+        <Enum name="CALL_POPUP_ON_CELL" data="1131">
+          <Arguments>
+            <Argument type="int" name="Row" />
+            <Argument type="int" name="Column" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="CLICK_FOR_EDIT" data="1152">
+          <Arguments>
+            <Argument type="int" name="Row" />
+            <Argument type="int" name="Column" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="CLICK_ON_CELL" data="1133">
+          <Arguments>
+            <Argument type="int" name="Row" />
+            <Argument type="int" name="Column" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="PRESS_MOUSE" data="1001">
+          <Arguments>
+            <Argument type="int" name="Row" />
+            <Argument type="int" name="Column" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="RELEASE_MOUSE" data="1003">
+          <Arguments>
+            <Argument type="int" name="Row" />
+            <Argument type="int" name="Column" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SCROLL_TO_CELL" data="1136">
+          <Arguments>
+            <Argument type="int" name="Row" />
+            <Argument type="int" name="Column" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SELECT_CELL" data="1137">
+          <Arguments>
+            <Argument type="int" name="Row" />
+            <Argument type="int" name="Column" />
+            
+          </Arguments>
+        </Enum>
+      </Events>
+      <SwingComponent>
+        <Component componentClassType="javax.swing.JTable" windowClassType="javax.swing.JFrame" />
+      </SwingComponent>
+    </Scope>
+    
+    <Scope name="JTableHeader">
+      <Events>
+        <Enum name="MOVE_COLUMN" data="1141">
+          <Arguments>
+            <Argument type="int" name="SourceColumn" />
+            <Argument type="int" name="TargetColumn" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="PRESS_MOUSE" data="1001">
+          <Arguments>
+            <Argument type="int" name="Row" />
+            <Argument type="int" name="Column" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="RELEASE_MOUSE" data="1003">
+          <Arguments>
+            <Argument type="int" name="Row" />
+            <Argument type="int" name="Column" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SELECT_COLUMN" data="1144">
+          <Arguments>
+            <Argument type="int" name="Column" />
+            
+          </Arguments>
+        </Enum>
+      </Events>
+      <SwingComponent>
+        <Component componentClassType="javax.swing.table.JTableHeader" windowClassType="javax.swing.JFrame" />
+      </SwingComponent>
+    </Scope>
+    <Scope name="JTextComponent">
+      <Events>
+        <Enum name="CHANGE_CARET_POSITION" data="1151">
+          <Arguments>
+            <Argument type="int" name="Position" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="CHANGE_CARET_POSITION_FOR_TEXT" data="1201">
+          <Arguments>
+            <Argument type="String" name="Text" />
+            <Argument type="boolean" name="IsBeforeText" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="CLEAR_TEXT" data="1152">
+          <Arguments>
+            
+          </Arguments>
+        </Enum>
+        <Enum name="ENTER_TEXT" data="1153">
+          <Arguments>
+            <Argument type="String" name="Text" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="PRESS_MOUSE" data="1154">
+          <Arguments>
+            <Argument type="int" name="Position" />
+            <Argument type="String" name="Text" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="RELEASE_MOUSE" data="1155">
+          <Arguments>
+            <Argument type="int" name="Position" />
+            <Argument type="String" name="Text" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SCROLL_TO_POSITION" data="1156">
+          <Arguments>
+            <Argument type="int" name="Position" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SELECT_TEXT" data="1157">
+          <Arguments>
+            <Argument type="int" name="Position" />
+            <Argument type="String" name="Text" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SELECT_TEXT_POS" data="1158">
+          <Arguments>
+            <Argument type="int" name="Position" />
+            <Argument type="int" name="EndPosition" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="TYPE_TEXT" data="1159">
+          <Arguments>
+            <Argument type="int" name="Position" />
+            <Argument type="String" name="Text" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="TYPE_TEXT_NO_POS" data="1160">
+          <Arguments>
+            <Argument type="String" name="Text" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="MOVE_CARET_POSITION" data="1202">
+          <Arguments>
+            <Argument type="int" name="Position" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="REPLACE_SELECTION" data="1203">
+          <Arguments>
+            <Argument type="String" name="Text" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SELECT" data="1204">
+          <Arguments>
+            <Argument type="int" name="Position" />
+            <Argument type="int" name="EndPosition" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SELECT_ALL" data="1205">
+          <Arguments>
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SELECT_TEXT_FOR_TEXT" data="1206">
+          <Arguments>
+            <Argument type="String" name="Text" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SET_CARET_POSITION" data="1207">
+          <Arguments>
+            <Argument type="int" name="Position" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SET_SELECTION_END" data="1208">
+          <Arguments>
+            <Argument type="int" name="EndPosition" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SET_SELECTION_START" data="1209">
+          <Arguments>
+            <Argument type="int" name="Position" />
+            
+          </Arguments>
+        </Enum>
+      </Events>
+      <SwingComponent>
+        <Component componentClassType="javax.swing.JPasswordField" windowClassType="javax.swing.JFrame" />
+        <Component componentClassType="javax.swing.JTextField" windowClassType="javax.swing.JFrame" />
+        <Component componentClassType="javax.swing.JEditorPane" windowClassType="javax.swing.JFrame" />
+        <Component componentClassType="javax.swing.JTextPane" windowClassType="javax.swing.JFrame" />
+      </SwingComponent>
+      <Scope name="JTextArea">
+        <Events>
+          <Enum name="CHANGE_CARET_POS_BY_ROW_COL" data="1161">
+            <Arguments>
+              <Argument type="int" name="StartRow" />
+              <Argument type="int" name="StartColumn" />
+              
+            </Arguments>
+          </Enum>
+          <Enum name="CHANGE_CARET_ROW" data="1162">
+            <Arguments>
+              <Argument type="int" name="StartRow" />
+              
+            </Arguments>
+          </Enum>
+          <Enum name="SELECT_TEXT_BY_ROW_COL" data="1163">
+            <Arguments>
+              <Argument type="int" name="StartRow" />
+              <Argument type="int" name="StartColumn" />
+              <Argument type="int" name="EndRow" />
+              <Argument type="int" name="EndColumn" />
+              
+            </Arguments>
+          </Enum>
+          <Enum name="TYPE_TEXT_BY_ROW_COL" data="1164">
+            <Arguments>
+              <Argument type="String" name="Text" />
+              <Argument type="int" name="StartRow" />
+              <Argument type="int" name="StartColumn" />
+              
+            </Arguments>
+          </Enum>
+        </Events>
+        <SwingComponent>
+          <Component componentClassType="javax.swing.JTextArea" windowClassType="javax.swing.JFrame" />
+        </SwingComponent>
+      </Scope>
+    </Scope>
+    <Scope name="JTree">
+      <Events>
+        <Enum name="CALL_POPUP_ON_Path" data="1151">
+          <Arguments>
+            <Argument type="String" name="TreePath" />
+            <Argument type="boolean" name="IsCompareExactly" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="CLICK_FOR_EDIT" data="1152">
+          <Arguments>
+            <Argument type="String" name="TreePath" />
+            <Argument type="boolean" name="IsCompareExactly" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="CLICK_ON_Path" data="1153">
+          <Arguments>
+            <Argument type="String" name="TreePath" />
+            <Argument type="boolean" name="IsCompareExactly" />
+            <Argument type="int" name="ClickCount" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="COLLAPSE_Path" data="1154">
+          <Arguments>
+            <Argument type="String" name="TreePath" />
+            <Argument type="boolean" name="IsCompareExactly" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="COLLAPSE_ROW" data="1155">
+          <Arguments>
+            <Argument type="String" name="TreePath" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="EXPAND_Path" data="1156">
+          <Arguments>
+            <Argument type="String" name="TreePath" />
+            <Argument type="boolean" name="IsCompareExactly" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="EXPAND_ROW" data="1157">
+          <Arguments>
+            <Argument type="String" name="TreePath" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SCROLL_TO_Path" data="1160">
+          <Arguments>
+            <Argument type="String" name="TreePath" />
+            <Argument type="boolean" name="IsCompareExactly" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SCROLL_TO_ROW" data="1161">
+          <Arguments>
+            <Argument type="String" name="TreePath" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SELECT_Path" data="1162">
+          <Arguments>
+            <Argument type="String" name="TreePath" />
+            <Argument type="boolean" name="IsCompareExactly" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="SELECT_ROW" data="1163">
+          <Arguments>
+            <Argument type="String" name="TreePath" />
+            
+          </Arguments>
+        </Enum>
+      </Events>
+      <SwingComponent>
+        <Component componentClassType="javax.swing.JTree" windowClassType="javax.swing.JFrame" />
+      </SwingComponent>
+    </Scope>
+    <Scope name="Window">
+      <Events>
+        <Enum name="ACTIVATE" data="1171">
+          <Arguments>
+            
+          </Arguments>
+        </Enum>
+        <Enum name="CLOSE" data="1172">
+          <Arguments>
+            
+          </Arguments>
+        </Enum>
+        <Enum name="MOVE" data="1173">
+          <Arguments>
+            <Argument type="int" name="X" />
+            <Argument type="int" name="Y" />
+            
+          </Arguments>
+        </Enum>
+        <Enum name="RESIZE" data="1174">
+          <Arguments>
+            <Argument type="int" name="Width" />
+            <Argument type="int" name="Height" />
+            
+          </Arguments>
+        </Enum>
+      </Events>
+      <SwingComponent>
+        <Component componentClassType="java.awt.Window" windowClassType="java.awt.Window" />
+        <Component componentClassType="java.awt.Frame" windowClassType="java.awt.Frame" />
+        <Component componentClassType="java.awt.Dialog" windowClassType="java.awt.Dialog" />
+        <Component componentClassType="javax.swing.JDialog" windowClassType="javax.swing.JDialog" />
+      </SwingComponent>
+      <Scope name="JFrame">
+        <Events>
+          <Enum name="DEMAXIMIZE" data="1181">
+            <Arguments>
+              
+            </Arguments>
+          </Enum>
+          <Enum name="MAXIMIZE" data="1182">
+            <Arguments>
+              
+            </Arguments>
+          </Enum>
+        </Events>
+        <SwingComponent>
+          <Component componentClassType="javax.swing.JFrame" windowClassType="javax.swing.JFrame" />
+        </SwingComponent>
+      </Scope>
+    </Scope>
+  </Scope>
+</GTT_Default_Component_XML_File>

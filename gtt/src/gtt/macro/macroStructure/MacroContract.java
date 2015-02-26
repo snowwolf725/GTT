@@ -1,0 +1,82 @@
+/*
+ * Copyright (C) 2006-2009
+ * Woei-Kae Chen <wkc@csie.ntut.edu.tw>
+ * Hung-Shing Chao <s9598007@ntut.edu.tw>
+ * Tung-Hung Tsai <s159020@ntut.edu.tw>
+ * Zhe-Ming Zhang <s2598001@ntut.edu.tw>
+ * Zheng-Wen Shen <zwshen0603@gmail.com>
+ * Jung-Chi Wang <snowwolf725@gmail.com>
+ *
+ * This file is part of GTT (GUI Testing Tool) Software.
+ *
+ * GTT is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * GTT is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ *
+ * GNU GENERAL PUBLIC LICENSE http://www.gnu.org/licenses/gpl
+ */
+package gtt.macro.macroStructure;
+
+import gtt.macro.macroStructure.MacroContract;
+
+
+public class MacroContract  {
+	private String m_preCondition = "";
+	private String m_action = "";
+	private String m_postCondition = "";
+	private int level = 1;
+
+	public MacroContract() {
+	}
+	
+	public int getLevel() {
+		return level;
+	}
+	
+	public void setLevel(int lv) {
+		level = lv;
+	}
+	
+	public MacroContract clone() {
+		MacroContract contract = new MacroContract();
+		contract.m_preCondition = m_preCondition;
+		contract.m_action = m_action;
+		contract.m_postCondition = m_postCondition;
+		contract.level = level;
+		return contract;
+	}
+
+	public void setPreCondition(String condition) {
+		m_preCondition = condition;
+	}
+
+	public void setAction(String condition) {
+		m_action = condition;
+	}
+
+	public void setPostCondition(String condition) {
+		m_postCondition = condition;
+	}
+
+	public String getPreCondition() {
+		return m_preCondition;
+	}
+
+	public String getAction() {
+		return m_action;
+	}
+
+	public String getPostCondition() {
+		return m_postCondition;
+	}
+}

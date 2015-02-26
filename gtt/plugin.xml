@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension-point id="GTTlipse.EventModel" name="EventModel" schema="schema/GTTlipse.EventModel.exsd"/>
+   <extension-point id="GTTlipse.EventModel.IEvent" name="IEvent" schema="schema/GTTlipse.EventModel.IEvent.exsd"/>
+   <extension-point id="GTTlipse.EventModel.IComponent" name="IComponent" schema="schema/GTTlipse.EventModel.IComponent.exsd"/>
+   <extension-point id="GTTlipse.EventModel.IDescriptorReader" name="IDescriptorReader" schema="schema/GTTlipse.EventModel.IDescriptorReader.exsd"/>
+   <extension-point id="GTTlipse.TestPlatformInfo" name="TestPlatformInfo" schema="schema/GTTlipse.TestPlatformInfo.exsd"/>
+   <extension-point id="GTTlipse.Macro.NodeEditingDialog" name="NodeEditingDialog" schema="schema/GTTlipse.Macro.NodeEditingDialog.exsd"/>
+   <extension-point id="GTTlipse.IO.ConfigFileLoader" name="ConfigFileLoader" schema="schema/GTTlipse.IO.ConfigFileLoader.exsd"/>
+   <extension-point id="GTTlipse.IO.ConfigFileSaver" name="ConfigFileSaver" schema="schema/GTTlipse.IO.ConfigFileSaver.exsd"/>
+   <extension-point id="GTTlipse.IO.TestScriptFileSaver" name="TestScriptFileSaver" schema="schema/GTTlipse.IO.TestScriptFileSaver.exsd"/>
+   <extension-point id="GTTlipse.IO.MacroScriptFileSaver" name="MacroScriptFileSaver" schema="schema/GTTlipse.IO.MacroScriptFileSaver.exsd"/>
+   <extension-point id="GTTlipse.IO.MacroScriptFileLoader" name="MacroScriptFileLoader" schema="schema/GTTlipse.IO.MacroScriptFileLoader.exsd"/>
+   <extension-point id="GTTlipse.IO.TestScriptFileLoader" name="TestScriptFileLoader" schema="schema/GTTlipse.IO.TestScriptFileLoader.exsd"/>
+   <extension-point id="GTTlipse.ScriptEditor.Action.Launcher" name="Launcher" schema="schema/GTTlipse.ScriptEditor.Action.Launcher.exsd"/>
+   <extension-point id="GTTlipse.ScriptEditor.Action.DefaultEventNode" name="DefaultEventNode" schema="schema/GTTlipse.ScriptEditor.Action.DefaultEventNode.exsd"/>
+   <extension-point id="GTTlipse.ScriptEditor.Action.DefaultAssertNode" name="DefaultAssertNode" schema="schema/GTTlipse.ScriptEditor.Action.DefaultAssertNode.exsd"/>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="gttlipse.editors.GttFileEditor"
+            extensions="gtt"
+            icon="images/GTT_Logo.gif"
+            id="GTTlipse.editors.GttFileEditor"
+            name="GTT File Editor">
+      </editor>
+      <editor
+            class="gttlipse.vfsmEditor.view.VFSMEditor"
+            contributorClass="gttlipse.vfsmEditor.actions.DiagramActionBarContributor"
+            extensions="vfsm"
+            icon="icons/sample.gif"
+            id="GTTlipse.VFSMEditor.ui.VFSMEditor"
+            name="VFSM Editor">
+      </editor>
+      <editor
+            class="gttlipse.fit.view.FitTableViewEditor"
+            contributorClass="gttlipse.editors.GttFileEditorContributor"
+            extensions="column"
+            icon="icons/sample.gif"
+            id="GTTlipse.fit.table.editor.FitTableViewEditor"
+            name="FitTableViewEditor">
+      </editor>
+      <editor
+            class="gttlipse.tabular.editors.MacroTabularEditor"
+            icon="icons/sample.gif"
+            id="GTTlipse.tabular.editors.MacroTabularEditor"
+            name="Macro Tabular Editor">
+      </editor>
+      <editor
+            class="gttlipse.tabular.editors.ScriptTabularEditor"
+            icon="icons/sample.gif"
+            id="GTTlipse.tabular.editors.ScriptTabularEditor"
+            name="Script Tabular Editor">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            name="GTT Wizards"
+            id="GTTlipse">
+      </category>
+      <wizard
+            canFinishEarly="false"
+            category="GTTlipse"
+            class="gttlipse.wizards.GTTNewWizard"
+            descriptionImage="images/GTT_Logo.gif"
+            finalPerspective="GTTlipse.GTTPerspective"
+            icon="images/GTT_Logo.gif"
+            id="GTTlipse.wizards.GTTNewWizard"
+            name="GTT VFSM file">
+      </wizard>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="GTT"
+            id="GTTlipse">
+      </category>
+      <view
+            allowMultiple="false"
+            category="GTTlipse"
+            class="gttlipse.scriptEditor.views.GTTTestScriptView"
+            icon="images/scriptMode.gif"
+            id="GTTlipse.views.GTTTestScriptView"
+            name="GTT Script"
+            restorable="true">
+      </view>
+      <view
+            allowMultiple="false"
+            category="GTTlipse"
+            class="gttlipse.macro.view.MacroViewPart"
+            icon="images/macroMode.gif"
+            id="GTTlipse.views.macroScriptView"
+            name="GTT Macro"
+            restorable="true"/>
+      <view
+            allowMultiple="false"
+            category="GTTlipse"
+            class="gttlipse.componentEditor.ComponentView"
+            icon="images/node2_component.gif"
+            id="GTTlipse.views.ComponentView"
+            name="GTT Component"
+            restorable="true"/>
+      <view
+            allowMultiple="false"
+            category="GTTlipse"
+            class="gttlipse.macro.report.CoverageReportView"
+            icon="images/newFile.gif"
+            id="GTTlipse.Report"
+            name="GTT Report"
+            restorable="true"/>
+      <view
+            allowMultiple="false"
+            category="GTTlipse"
+            class="gttlipse.fit.view.GTTFitView"
+            icon="images/fitnode.gif"
+            id="GTTlipse.GTTFitView"
+            name="GTT Fit"
+            restorable="true">
+      </view>
+      <view
+            allowMultiple="false"
+            category="GTTlipse"
+            class="gttlipse.vfsmCoverageAnalyser.view.CoverageView"
+            icon="images/ICA.gif"
+            id="GTTlipse.views.GTTCoverageView"
+            name="GTT Coverage"
+            restorable="true">
+      </view>
+      <view
+            allowMultiple="false"
+            category="GTTlipse"
+            class="gttlipse.macro.view.BadSmellListView"
+            icon="images/newFile.gif"
+            id="GTTlipse.views.badSmellListView"
+            name="Bad Smell List View"
+            restorable="true">
+      </view>
+      <view
+            allowMultiple="false"
+            category="GTTlipse"
+            class="gttlipse.web.loadtesting.view.LoadTestingResultView"
+            icon="images/newFile.gif"
+            id="GTTlipse.views.loadTestingResultView"
+            name="Load Testing result view"
+            restorable="true">
+      </view>      
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="gttlipse.preferences.GTTInterpreterPreferencePage"
+            id="GTTlipse.preferences.GTTPreferencePage"
+            name="GTT"/>
+      <page
+            category="GTTlipse.preferences.GTTPreferencePage"
+            class="gttlipse.preferences.GTTInterpreterPreferencePage"
+            id="GTTlipse.preferences.GTTInterpreterPreferencePage"
+            name="GTT Interpreter">
+      </page>
+      <page
+            category="GTTlipse.preferences.GTTPreferencePage"
+            class="gttlipse.preferences.GTTSmellPreferencePage"
+            id="GTTlipse.preferences.GTTSmellPreferencePage"
+            name="Script Smell">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer class="gttlipse.preferences.PreferenceInitializer"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="true"
+            id="GTTlipse.ui.popupMenus.objectContribution.javafile"
+            nameFilter="*.java"
+            objectClass="org.eclipse.core.resources.IResource">
+         <action
+               class="gttlipse.scriptEditor.actions.GotoScriptActionFromObject"
+               id="GTTlipse.ui.popupMenus.objectContribution.GotoScriptAction"
+               label="GotoScript From Object"
+               menubarPath="additions"/>
+      </objectContribution>
+      <viewerContribution
+            id="GTTlipse.ui.popupMenus.viewerContribution"
+            targetID="#CompilationUnitEditorContext">
+         <action
+               class="gttlipse.scriptEditor.actions.GotoScriptActionFromViewer"
+               id="GTTlipse.ui.popupMenus.viewerContribution.GotoScriptAction"
+               label="GotoScript From View"
+               menubarPath="additions"/>
+      </viewerContribution>
+      <objectContribution
+            adaptable="true"
+            id="GTTlipse.ui.popupMenus.objectContribution.javafolder"
+            objectClass="org.eclipse.core.resources.IFolder">
+         <action
+               class="gttlipse.scriptEditor.actions.GotoScriptActionFromObject"
+               id="GTTlipse.ui.popupMenus.objectContribution.GotoScriptAction.javafolder"
+               label="GotoScript From Object"/>
+      </objectContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="gttlipse.GTTPerspective"
+            icon="images/GTT_Logo.gif"
+            id="GTTlipse.GTTPerspective"
+            name="GTT"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.propertyPages">
+      <page
+            class="gttlipse.properties.GTTlipsePropertyPage"
+            id="GTTlipse.properties.GTTlipsePropertyPageForIProject"
+            name="GTTlipse Page"
+            nameFilter="*">
+            <enabledWhen>
+            	<instanceof value="org.eclipse.core.resources.IProject">
+            	</instanceof>
+            </enabledWhen>
+            </page>
+      <page
+            class="gttlipse.properties.GTTlipsePropertyPage"
+            id="GTTlipse.properties.GTTlipsePropertyPageForIJavaProject"
+            name="GTTlipse_Page"
+            nameFilter="*">
+            <enabledWhen>
+            	<instanceof value="org.eclipse.jdt.core.IJavaProject">
+            	</instanceof>
+            </enabledWhen>
+            </page>
+   </extension>
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="GTTlipse.actionSet"
+            label="GTT Actions"
+            visible="true">
+         <menu
+               id="GTTMenu"
+               label="&amp;GTT Menu">
+            <separator
+                  name="Tabular">
+            </separator>
+            <separator name="GTTGroup"/>
+         </menu>
+         <action
+               class="gttlipse.actions.ConfigAction"
+               icon="images/configuration.gif"
+               id="GTTlipse.actions.ConfigAction"
+               label="&amp;Edit Config Action"
+               menubarPath="GTTMenu/GTTGroup"
+               style="push"
+               toolbarPath="GTTGroup"
+               tooltip="Edit Config"/>
+         <action
+               class="gttlipse.actions.SaveGTTFile"
+               icon="images/saveFile.gif"
+               id="GTTlipse.actions.SaveGTTFile"
+               label="&amp;Save GTT File Action"
+               menubarPath="GTTMenu/GTTGroup"
+               toolbarPath="GTTGroup"
+               tooltip="Save GTT File"/>
+         <action
+               class="gttlipse.scriptEditor.actions.SelectProjectAction"
+               icon="images/openFile.gif"
+               id="GTTlipse.actions.OpenGTTFile"
+               label="&amp;Open GTT File Action"
+               menubarPath="GTTMenu/GTTGroup"
+               style="push"
+               toolbarPath="GTTGroup"
+               tooltip="Open GTT File"/>
+         <action
+               class="gttlipse.tabular.actions.RemoveColumn"
+               icon="images/ColRemove.ico"
+               id="GTTlipse.tabular.actions.RemoveColumn"
+               label="&amp;Remove Column"
+               menubarPath="GTTMenu/Tabular"
+               style="push"
+               toolbarPath="Tabular"
+               tooltip="Remove Column">
+         </action>
+         <action
+               class="gttlipse.tabular.actions.AddColumn"
+               icon="images/ColAdd.ico"
+               id="GTTlipse.tabular.actions.AddColumn"
+               label="&amp;Add Column"
+               menubarPath="GTTMenu/Tabular"
+               style="push"
+               toolbarPath="Tabular"
+               tooltip="Add Column">
+         </action>
+         <action
+               class="gttlipse.tabular.actions.RemoveRow"
+               icon="images/RowRemove.ico"
+               id="GTTlipse.tabular.actions.RemoveRow"
+               label="&amp;Remove Row"
+               menubarPath="GTTMenu/Tabular"
+               style="push"
+               toolbarPath="Tabular"
+               tooltip="Remove Row">
+         </action>
+         <action
+               class="gttlipse.tabular.actions.AddRow"
+               icon="images/RowAdd.ico"
+               id="GTTlipse.tabular.actions.AddRow"
+               label="&amp;Add Row"
+               menubarPath="GTTMenu/Tabular"
+               style="push"
+               toolbarPath="Tabular"
+               tooltip="Add Row">
+         </action>
+         <action
+               class="gttlipse.tabular.actions.Paste"
+               icon="images/paste.gif"
+               id="GTTlipse.tabular.actions.Paste"
+               label="&amp;Paste Cell"
+               menubarPath="GTTMenu/Tabular"
+               style="push"
+               toolbarPath="Tabular"
+               tooltip="Paste Cell">
+         </action>
+         <action
+               class="gttlipse.tabular.actions.Copy"
+               icon="images/copy.gif"
+               id="GTTlipse.tabular.actions.Copy"
+               label="&amp;Copy Cell"
+               menubarPath="GTTMenu/Tabular"
+               style="push"
+               toolbarPath="Tabular"
+               tooltip="Copy Cell">
+         </action>
+         <action
+               class="gttlipse.tabular.actions.Cut"
+               icon="images/cut.gif"
+               id="GTTlipse.tabular.actions.Cut"
+               label="&amp;Cut Cell"
+               menubarPath="GTTMenu/Tabular"
+               style="push"
+               toolbarPath="Tabular"
+               tooltip="Cut Cell">
+         </action>
+         <action
+               class="gttlipse.tabular.actions.Replay"
+               icon="images/replay2.gif"
+               id="GTTlipse.tabular.actions.Replay"
+               label="&amp;Replay Macro Script"
+               menubarPath="GTTMenu/Tabular"
+               style="push"
+               toolbarPath="Tabular"
+               tooltip="Replay Macro Script">
+         </action>
+         <action
+               class="gttlipse.tabular.actions.MoveDown"
+               icon="images/down.gif"
+               id="GTTlipse.tabular.actions.MoveDown"
+               label="&amp;Move Down"
+               menubarPath="GTTMenu/Tabular"
+               style="push"
+               toolbarPath="Tabular"
+               tooltip="Move Down">
+         </action>
+         <action
+               class="gttlipse.tabular.actions.MoveUp"
+               icon="images/up.gif"
+               id="GTTlipse.tabular.actions.MoveUp"
+               label="&amp;Move Up"
+               menubarPath="GTTMenu/Tabular"
+               style="push"
+               toolbarPath="Tabular"
+               tooltip="Move Up">
+         </action>
+      </actionSet>
+   </extension>
+</plugin>
